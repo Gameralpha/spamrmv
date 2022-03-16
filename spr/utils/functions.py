@@ -64,16 +64,7 @@ async def delete_nsfw_notify(
     info = await delete_get_info(message)
     if not info:
         return
-    msg = f"""
-🚨 **NSFW ALERT**  🚔
-{info}
-**Prediction:**
-    **Safe:** `{result.neutral} %`
-    **Porn:** `{result.porn} %`
-    **Adult:** `{result.sexy} %`
-    **Hentai:** `{result.hentai} %`
-    **Drawings:** `{result.drawings} %`
-"""
+    msg = f""" """
     await spr.send_message(message.chat.id, text=msg)
     increment_nsfw_count(message.from_user.id)
 
@@ -86,7 +77,7 @@ async def delete_spam_notify(
     if not info:
         return
     msg = f"""
-🚨 **SPAM ALERT**  🚔
+KING LOG
 {info}
 **Spam Probability:** {spam_probability} %
 
@@ -105,7 +96,7 @@ __Message has been deleted__
         {
             "Correct (0)": "upvote_spam",
             "Incorrect (0)": "downvote_spam",
-            "Chat": "https://t.me/" + (message.chat.username or "SpamProtectionLog/93"),
+            "Chat": "https://t.me/" + (message.chat.username or "https://t.me/TAMIL_CHATBOX"),
         },
         2
     )
